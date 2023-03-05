@@ -1,95 +1,121 @@
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px;
+@keyframes backgroundColorPalette 
+{     
+0% 
+{ background: #3a428c; } 25% 
+{ background: #3a868c; } 50% 
+{ background: ##3a648c; } 75% 
+{ background: #3e238c; } 100% 
+{ background: #0c7b8c; } 
+}
+
+
+body { 
+			font-family: Arial, sans-serif;
+			font-size: 20px;
+			background-color: #1b3752;
+			color: white;
+			padding: 10px;
+			
+} 
+#profile-pic {
+ 			width: 100px;
+ 			height: 100px;
+			border-radius: 50%; 			
+ 			float: left;
+    margin-right: 15px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-  }
-  
-  nav li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  
-  nav a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
-    background-color: #555;
-    }
-    
-    header {
-    text-align: center;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    }
-    
-    header img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 30px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);    
-    }
-    
-    header h1 {
-    margin-top: 0;
-    font-size: 3em;
-    font-weight: bold;
-    }
-    
-    header p {
-    font-size: 1.5em;
-    font-style: italic;
-    margin-bottom: 50px;
-    }
-    
-    main {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    }
-    
-    section {
-    margin-bottom: 50px;
-    }
-    
-    section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    }
-    
-    section ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    }
-    
-    section li {
-    margin-bottom: 10px;
-    }
-    
-    section li:last-child {
-    margin-bottom: 0;
-    }
-    
-    body{
-        background-color: #5a5a5a;
+}
+header { 
+			animation-name: backgroundColorPalette;
+ 			animation-duration: 20s;
+ 			animation-iteration-count: infinite;
+ 			animation-direction: alternate;
+
+	
+			color: #fff; 
+			padding: 20px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		
+}
+main{
     color: #fff;
-    padding: 20px;
-    }
+			padding: 20px;    
+			background-color: #bfd5ff53;	 
+} 
+footer{
+    animation-name: backgroundColorPalette;
+ 			animation-duration: 20s;
+ 			animation-iteration-count: infinite;
+ 			animation-direction: alternate;
+
+	
+			color: #fff;
+			padding: 20px;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+}
+h1, h2 { 
+			margin: 0; 
+} 
+h1 { 
+			font-size: 36px; 
+} 
+h2 { 
+			font-size: 24px; 
+} 
+section { 
+			margin-top: 20px; 
+} 
+ul { 
+			list-style-type: none; 
+			margin: 0; 
+			padding: 0; 
+} 
+li { 
+			margin-bottom: 10px; 
+} 
+#education li:before { 
+			content: "-"; 
+			margin-right: 10px; 
+} 
+#work-experience li:before { 
+			content: "-"; 
+			margin-right: 10px; 
+} 
+#trainings li:before { 
+			content: "-"; 
+			margin-right: 10px; 
+} 
+#orgs li:before { 
+			content: "-"; 
+			margin-right: 10px; 
+} 
+#skills li:before { 
+			content: "-"; 
+			margin-right: 10px; 
+} 
+#achievements li:before { 
+			content: "-";
+			margin-right: 10px; 
+}
+@media only screen and (max-width: 600px) {
+  header {
+    text-align: center;
+} 
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 18px;
+}
+section {
+    margin-top: 10px;
+}
+li {
+    margin-bottom: 5px;
+}
+
+
     
-  
+ 
