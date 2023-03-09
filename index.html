@@ -88,7 +88,156 @@
       <li>🧭Location: Anislag, Corella, Bohol, Philippines</li>
     </ul>        
     </footer>
-    
+	   
+    <div
+
+    class="container"
+
+    style="
+
+      width: fit-content;
+
+      position: fixed;
+
+      width: 300px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      z-index:100000;
+
+      bottom: 20px; right: 30px; align-items: flex-end;flex-direction: column
+
+    "
+
+  >
+
+    <iframe
+
+    id="box"
+
+    src=https://app.flowcharts.ai/web_to_sms/Nyrcwdt6WcgNFM4rDEpncwLQlz33
+
+    width="300"
+
+    height="650"
+
+    name="box"
+
+    style="display: none; border-radius: 8px; border: none; z-index:100000;"
+
+  ></iframe>
+
+    <div
+
+      id="btn"fix chatbot mobile
+
+      onclick="handleToggle()"
+
+      style="
+
+        width: 50px;
+
+        height: 50px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        border-radius: 50%;
+
+        background-color: #0a65ff;
+
+        margin: 10px;
+
+        cursor: pointer;
+
+        z-index:100000;
+
+      "
+
+    >
+
+      <svg
+
+        xmlns="http://www.w3.org/2000/svg"
+
+        height="24px"
+
+        viewBox="0 0 24 24"
+
+        width="24px"
+
+        fill="#FFFFFF"
+
+      >
+
+        <path d="M0 0h24v24H0V0z" fill="none" />
+
+        <path
+
+          d="M15 4v7H5.17l-.59.59-.58.58V4h11m1-2H3c-.55 0-1 .45-1 1v14l4-4h10c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm5 4h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1z"
+
+        />
+
+      </svg>
+
+    </div>
+
+  </div>
+
+  <script>
+
+  window.onload = getData;
+
+  const iframe = document.getElementById("box");
+
+  const btn = document.getElementById("btn");
+
+  function handleToggle() {
+
+    iframe.style.display === "none"
+
+      ? (iframe.style.display = "block")
+
+      : (iframe.style.display = "none");
+
+  }
+
+  function getData() {
+
+    var eventMethod = window.addEventListener
+
+      ? "addEventListener"
+
+      : "attachEvent";
+
+    var eventer = window[eventMethod];
+
+    var messageEvent = eventMethod === "attachEvent" ? "onmessage" : "message";
+
+    eventer(messageEvent, (e) => {
+
+      const { complete } = e.data;
+
+      if (complete) {
+
+        iframe.style.display = "none";
+
+        btn.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+  </script>
+
+  
     
     
 	</body> 
